@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>PokedexMarvin</title>
+        <link rel="stylesheet" href="./assets/styles.css"/>
+        <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+        <script src="https://unpkg.com/pokeapi-js-wrapper/dist/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <pokemon-display  @endLoad="updateLoading" v-if="!dispSearch"></pokemon-display>
+        </div>
+
+        <!-- Import App -->
+        <script src="./main.js"></script>
+
+        <!-- Import Components -->
+        <script src="./components/PokemonDisplay.js"></script>
+
+        <!-- Mount App -->
+        <script>
+            const mountedApp = app.mount('#app')
+        </script>
+    </body>
+</html>
